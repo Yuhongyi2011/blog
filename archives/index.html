@@ -12,13 +12,13 @@
 <meta property="og:title" content="俞弘弈的小窝">
 <meta property="og:url" content="http://example.com/archives/index.html">
 <meta property="og:site_name" content="俞弘弈的小窝">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Yuhongyi">
 <meta name="twitter:card" content="summary">
 
-	<meta name="theme-color" content="#5e72e4">
-	<meta name="theme-color-rgb" content="94,114,228">
-	<meta name="theme-color-origin" content="#5e72e4">
+	<meta name="theme-color" content="#656D83">
+	<meta name="theme-color-rgb" content="101,109,131">
+	<meta name="theme-color-origin" content="#656D83">
 	<meta name="argon-enable-custom-theme-color" content="true">
 	<meta name="theme-card-radius" content="12">
 	<meta name="theme-version" content="1.0.2">
@@ -63,12 +63,12 @@
 					effect: "fadeIn"
 				},
 			
-			disable_pjax: false,
+			disable_pjax: true,
 			headroom: false
 		}
 	</script>
 	<script>
-		var darkmodeAutoSwitch = "system";
+		var darkmodeAutoSwitch = "alwayson";
 		function setDarkmode(enable){
 			if (enable == true){
 				$("html").addClass("darkmode");
@@ -154,13 +154,13 @@
 <style id="themecolor_css">
 	
 	:root{
-		--themecolor: #5e72e4;
-		--themecolor-dark0: #5368E2;
-		--themecolor-dark: #485FE0;
-		--themecolor-dark2: #324CDD;
-		--themecolor-dark3: #233DD2;
-		--themecolor-light: #8A98EB;
-		--themecolor-rgbstr: 94,114,228;
+		--themecolor: #656D83;
+		--themecolor-dark0: #5F677C;
+		--themecolor-dark: #5A6175;
+		--themecolor-dark2: #4F5566;
+		--themecolor-dark3: #444958;
+		--themecolor-light: #7F879C;
+		--themecolor-rgbstr: 101,109,131;
 		--themecolor-gradient: linear-gradient(150deg,var(--themecolor-light) 15%, var(--themecolor) 70%, var(--themecolor-dark0) 94%);
 
 	}
@@ -313,7 +313,7 @@
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
-			opacity: 0.8;
+			opacity: 0.9;
 			transition: opacity .5s ease;
 		}
 		html.darkmode #content:before{
@@ -337,7 +337,7 @@
 				transition: opacity .5s ease;
 			}
 			html.darkmode #content:after {
-				opacity: 0.8;
+				opacity: 0.9;
 			}
 			html.darkmode #content:before {
 				opacity: 0;
@@ -351,6 +351,23 @@
 	</style>
 
 
+
+	<style>
+		#banner:after {
+			content: '';
+			width: 100vw;
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 120px;
+			background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.15) 35%, rgba(0,0,0,0) 100%);
+			display: block;
+			z-index: -1;
+		}
+		.banner-title {
+			text-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+		}
+	</style>
 
 
 <div id="float_action_buttons" class="float-action-buttons fabtns-unloaded">
@@ -425,13 +442,15 @@
 <div id="content" class="site-content">
 
 
+	<script src="https://cdn.jsdelivr.net/npm/@waline/client"></script>
+
 
 
 	<script>
 		var _hmt = _hmt || [];
 		(function() {
 		  var hm = document.createElement("script");
-		  hm.src = "https://hm.baidu.com/hm.js?" ;
+		  hm.src = "https://hm.baidu.com/hm.js?e2c8bc0daadbcc7b6713bc5dfb0c89d6" ;
 		  var s = document.getElementsByTagName("script")[0]; 
 		  s.parentNode.insertBefore(hm, s);
 		})();
