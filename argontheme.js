@@ -1064,6 +1064,7 @@ function typeEffect(element, text, now, interval){
 		setTimeout(function(){
 			element.classList.remove('typing-effect');
 		}, 1000 - ((interval * now) % 1000) - 50);
+		
 		return;
 	}
 	element.innerText = text.substring(0, now);
