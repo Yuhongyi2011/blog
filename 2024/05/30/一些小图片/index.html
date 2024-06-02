@@ -26,7 +26,7 @@
 	<meta name="theme-color" content="#656D83">
 	<meta name="theme-color-rgb" content="101,109,131">
 	<meta name="theme-color-origin" content="#656D83">
-	<meta name="argon-enable-custom-theme-color" content="true">
+	<meta name="argon-enable-custom-theme-color" content="false# 允许用户自定义主题色">
 	<meta name="theme-card-radius" content="12">
 	<meta name="theme-version" content="1.0.2">
 	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -65,7 +65,10 @@
 			
 			pangu: "false",
 			
-				lazyload: false,
+				lazyload: {
+					threshold: 800,
+					effect: "fadeIn"
+				},
 			
 			disable_pjax: false,
 			headroom: false
@@ -225,6 +228,8 @@
 													<div class="dropdown-menu">
 														
 															<a href='../../../../index.html' class='dropdown-item'>归档</a>
+														
+															<a href='../../../../index.html' class='dropdown-item'>相册</a>
 														
 													</div>
 												
@@ -388,7 +393,7 @@
 	<button id="fabtn_toggle_darkmode" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button"  aria-label="Toggle Darkmode" tooltip-darkmode="夜间模式" tooltip-blackmode="暗黑模式" tooltip-lightmode="日间模式">
 		<span class="btn-inner--icon"><i class="fa fa-moon-o"></i><i class='fa fa-lightbulb-o'></i></span>
 	</button>
-	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button"  aria-label="Open Blog Settings Menu" tooltip="设置">
+	<button id="fabtn_toggle_blog_settings_popup" class="btn btn-icon btn-neutral fabtn shadow-sm" type="button" style='display: none;'  aria-label="Open Blog Settings Menu" tooltip="设置">
 		<span class="btn-inner--icon"><i class="fa fa-cog"></i></span>
 	</button>
 	<div id="fabtn_blog_settings_popup" class="card shadow-sm" style="opacity: 0;" aria-hidden="true">
@@ -474,7 +479,7 @@
 			<div id="leftbar_announcement" class="card bg-white shadow-sm border-0">
 				<div class="leftbar-announcement-body">
 					<div class="leftbar-announcement-title text-white">公告</div>
-					<div class="leftbar-announcement-content text-white">每周一篇教程，有时候不更新</div>
+					<div class="leftbar-announcement-content text-white">每周发癫，永不停歇</div>
 				</div>
 			</div>
 		
@@ -483,13 +488,13 @@
 				<span class="leftbar-banner-title text-white">Yuhongyi</span>
 				
 				
-					<span class="leftbar-banner-subtitle text-white">葵花宝典</span>
+					<span class="leftbar-banner-subtitle text-white"><span class='hitokoto'></span></span>
 				
 			</div>
 			
 			
 				<ul id='leftbar_part1_menu' class='leftbar-menu'>
-					<li class='leftbar-menu-item'><a href='../../../../index.html'>首页</a></li><li class='leftbar-menu-item'><a href='../../../../archives'>归档</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>二级菜单</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>三级菜单</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a href='../../../../index.html'>首页</a></li></ul></li></ul></li>
+					<li class='leftbar-menu-item'><a href='../../../../index.html'>首页</a></li><li class='leftbar-menu-item'><a href='../../../../archives'>归档</a></li><li class='leftbar-menu-item leftbar-menu-item-haschildren'><a no-pjax onclick='return false;'>二级菜单</a><ul class='leftbar-menu-item leftbar-menu-subitem shadow-sm'><li class='leftbar-menu-item'><a href='../../../../index.html'>首页</a></li><li class='leftbar-menu-item'><a href='../../../../photos'>相册</a></li></ul></li>
 				</ul>
 			
 			<div class="card-body text-center leftbar-search-button">
@@ -686,8 +691,10 @@
 	</header>
 
 	<div class="post-content" id="post_content">
-		<h1 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h1><h2 id="美国全盘"><a href="#美国全盘" class="headerlink" title="美国全盘"></a>美国全盘</h2><p><img src="./20241351140_GOES16-ABI-FD-GEOCOLOR-21696x21696.jpg" alt="image"></p>
-<p><img src="./20241351156_GOES16-ABI-CONUS-GEOCOLOR-10000x6000.jpg" alt="image"></p>
+		<h1 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h1><h2 id="美国全盘"><a href="#美国全盘" class="headerlink" title="美国全盘"></a>美国全盘</h2><p><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="./20241351140_GOES16-ABI-FD-GEOCOLOR-21696x21696.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="image"></p>
+
+<p><img class="lazyload lazyload-style-1" src="data:image/svg+xml;base64,PCEtLUFyZ29uTG9hZGluZy0tPgo8c3ZnIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjZmZmZmZmMDAiPjxnPjwvZz4KPC9zdmc+"  data-original="./20241351156_GOES16-ABI-CONUS-GEOCOLOR-10000x6000.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" alt="image"></p>
+
 
 	</div>
 
@@ -850,6 +857,13 @@
 		
 		
 		
+
+		
+			<script>
+				var argonEnableCodeHighlight = true;
+			</script>
+			
+<link rel="stylesheet" href="../../../../assets/vendor/highlight/styles/vs2015.css">
 
 		
 
